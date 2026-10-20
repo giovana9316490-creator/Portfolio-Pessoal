@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste do Supabase</title>
+</head>
+<body>
+    <h1>Teste de conexão</h1>
+    <p id="resultado">Verificando conexão...</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+
+    <script>
+        async function testarConexao() {
+            const resultado = document.getElementById("resultado");
+
+            try {
+                const { data, error } = await supabaseClient
+                    .from("projetos")
+                    .select("id")
+                    .limit(1);
+
+                if (error) {
+                    resultado.textContent =
+                        "A conexão foi iniciada, mas a consulta falhou: " +
+                        error.message;
+                    return;
+                }
+
+                resultado.textContent =
+                    "Conexão funcionando! A tabela projetos respondeu. " +
+                    "Registros encontrados: " + data.length;
+            } catch (erro) {
+                resultado.textContent =
+                    "Não foi possível concluir o teste: " + erro.message;
+            }
+        }
+
+        testarConexao();
+    </script>
+</body>
+</html>
