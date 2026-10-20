@@ -1,1 +1,140 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Meu Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .painel {
+            padding: 40px 0;
+        }
+
+        .painel-topo {
+            background: linear-gradient(135deg, #382477, #8062f0);
+            color: white;
+            padding: 35px;
+            border-radius: 18px;
+            margin-bottom: 30px;
+        }
+
+        .painel-topo h1 {
+            margin-bottom: 10px;
+        }
+
+        .painel-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .painel-card {
+            background: white;
+            padding: 28px;
+            border-radius: 16px;
+            border: 1px solid #e8e1ff;
+            box-shadow: 0 8px 25px rgba(50, 30, 100, 0.06);
+        }
+
+        .painel-card h2 {
+            color: #382477;
+            margin-bottom: 12px;
+        }
+
+        .painel-card p {
+            margin-bottom: 20px;
+        }
+
+        .painel-botao {
+            display: inline-block;
+            padding: 11px 20px;
+            background: #6c4be8;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        .painel-botao:hover {
+            background: #382477;
+        }
+
+        .aviso-painel {
+            margin-top: 25px;
+            padding: 18px;
+            background: #eee9ff;
+            border-radius: 12px;
+        }
+
+        @media (max-width: 650px) {
+            .painel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .painel-topo {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="quem-sou-eu.html">Quem sou eu</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html">Contato</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
+
+    <main class="painel">
+        <section class="painel-topo">
+            <h1>Dashboard</h1>
+            <p>Área de administração do meu portfólio escolar.</p>
+        </section>
+
+        <section class="painel-grid">
+            <article class="painel-card">
+                <h2>Meus projetos</h2>
+                <p>
+                    Futuramente, você poderá cadastrar projetos,
+                    editar informações, adicionar links e publicar trabalhos.
+                </p>
+                <a class="painel-botao" href="portfolio.html">
+                    Ver portfólio
+                </a>
+            </article>
+
+            <article class="painel-card">
+                <h2>Mensagens recebidas</h2>
+                <p>
+                    Futuramente, você poderá consultar as mensagens
+                    enviadas pelo formulário de contato.
+                </p>
+                <a class="painel-botao" href="contato.html">
+                    Ver formulário
+                </a>
+            </article>
+        </section>
+
+        <section class="aviso-painel">
+            <strong>Importante:</strong>
+            <p>
+                Esta página é apenas a estrutura visual.
+                O acesso protegido e as operações do banco de dados
+                serão implementados na etapa de integração com o Supabase.
+            </p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Meu Portfólio Escolar</p>
+    </footer>
+
+</body>
+</html>
+
