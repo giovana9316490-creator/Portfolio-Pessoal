@@ -1,4 +1,4 @@
 
-const SUPABASE_URL = "COLOQUE_A_URL_AQUI";
-const SUPABASE_PUBLISHABLE_KEY = "COLOQUE_SUA_CHAVE_PUBLICAVEL_AQUI";
+const SUPABASE_URL = "https://qjuieeosgukjosqetyxy.supabase.co/rest/v1/";
+const SUPABASE_PUBLISHABLE_KEY = "sb_publishable_5JVWLhvVqlPZbwtTPWKiaw_3v0a9eJd";
 
