@@ -1,1 +1,135 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Meu Portfólio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .login-container {
+            max-width: 430px;
+            margin: 65px auto;
+            padding: 35px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(50, 30, 100, 0.10);
+        }
+
+        .login-container h1 {
+            color: #382477;
+            margin-bottom: 10px;
+        }
+
+        .login-container > p {
+            color: #6d687e;
+            margin-bottom: 25px;
+        }
+
+        .login-container label {
+            display: block;
+            font-weight: bold;
+            margin: 18px 0 7px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #d9d2ec;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 14px;
+            margin-top: 25px;
+            border: none;
+            border-radius: 25px;
+            background: #6c4be8;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .login-container button:hover {
+            background: #382477;
+        }
+
+        #mensagem-login {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .voltar {
+            display: block;
+            text-align: center;
+            margin-top: 22px;
+            color: #6c4be8;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="quem-sou-eu.html">Quem sou eu</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="login-container">
+            <h1>Área administrativa</h1>
+            <p>Entre com sua conta para administrar o portfólio.</p>
+
+            <form id="form-login">
+                <label for="email">E-mail</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Digite seu e-mail"
+                    autocomplete="username"
+                    required
+                >
+
+                <label for="senha">Senha</label>
+                <input
+                    type="password"
+                    id="senha"
+                    name="senha"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required
+                >
+
+                <button type="submit">Entrar</button>
+                <p id="mensagem-login" role="status"></p>
+            </form>
+
+            <a class="voltar" href="index.html">← Voltar ao início</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Meu Portfólio Escolar</p>
+    </footer>
+
+    <script>
+        document.getElementById("form-login")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                document.getElementById("mensagem-login").textContent =
+                    "A tela está pronta. A autenticação será conectada ao Supabase na próxima etapa.";
+            });
+    </script>
+
+</body>
+</html>
+
