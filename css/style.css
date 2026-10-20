@@ -1,1 +1,192 @@
 
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --fundo: #f6f4ff;
+    --roxo: #6c4be8;
+    --roxo-escuro: #382477;
+    --texto: #27243a;
+    --branco: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--fundo);
+    color: var(--texto);
+    line-height: 1.6;
+}
+
+/* ===== MENU ===== */
+header {
+    background: var(--branco);
+    padding: 20px 8%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--texto);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--roxo);
+}
+
+/* ===== CONTEÚDO PRINCIPAL ===== */
+main {
+    width: min(1100px, 88%);
+    margin: auto;
+}
+
+.hero {
+    margin-top: 45px;
+    padding: 90px 35px;
+    text-align: center;
+    color: var(--branco);
+    border-radius: 24px;
+    background: linear-gradient(135deg, #382477, #8062f0);
+}
+
+.hero > p:first-child {
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.2;
+    margin-bottom: 22px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 13px 25px;
+    background: var(--branco);
+    color: var(--roxo-escuro);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== SEÇÕES ===== */
+.sobre,
+.destaques {
+    padding: 65px 0 20px;
+}
+
+.sobre h2,
+.destaques h2 {
+    font-size: 30px;
+    color: var(--roxo-escuro);
+    margin-bottom: 18px;
+}
+
+.sobre p {
+    margin-bottom: 18px;
+}
+
+.sobre a {
+    color: var(--roxo);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.sobre a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CARDS ===== */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 25px;
+}
+
+.cards article {
+    background: var(--branco);
+    padding: 28px;
+    border-radius: 16px;
+    border: 1px solid #e8e1ff;
+    box-shadow: 0 8px 25px rgba(50, 30, 100, 0.05);
+    transition: transform 0.3s;
+}
+
+.cards article:hover {
+    transform: translateY(-5px);
+}
+
+.cards h3 {
+    color: var(--roxo);
+    margin-bottom: 12px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    margin-top: 65px;
+    background: var(--roxo-escuro);
+    color: var(--branco);
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 700px) {
+    header {
+        padding: 18px 5%;
+    }
+
+    nav {
+        gap: 14px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre,
+    .destaques {
+        padding-top: 45px;
+    }
+}
+
