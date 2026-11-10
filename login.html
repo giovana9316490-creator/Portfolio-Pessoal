@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Meu Portfólio</title>
     <link rel="stylesheet" href="css/style.css">
+
     <style>
         .login-container {
             max-width: 430px;
@@ -38,6 +39,7 @@
             border: 1px solid #d9d2ec;
             border-radius: 8px;
             font-size: 15px;
+            box-sizing: border-box;
         }
 
         .login-container button {
@@ -57,6 +59,11 @@
             background: #382477;
         }
 
+        .login-container button:disabled {
+            opacity: 0.6;
+            cursor: wait;
+        }
+
         #mensagem-login {
             margin-top: 15px;
             font-size: 14px;
@@ -71,6 +78,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -84,15 +92,16 @@
 
     <main>
         <section class="login-container">
+
             <h1>Área administrativa</h1>
             <p>Entre com sua conta para administrar o portfólio.</p>
 
             <form id="form-login">
+
                 <label for="email">E-mail</label>
                 <input
                     type="email"
                     id="email"
-                    name="email"
                     placeholder="Digite seu e-mail"
                     autocomplete="username"
                     required
@@ -102,17 +111,23 @@
                 <input
                     type="password"
                     id="senha"
-                    name="senha"
                     placeholder="Digite sua senha"
                     autocomplete="current-password"
                     required
                 >
 
-                <button type="submit">Entrar</button>
+                <button type="submit" id="botao-login">
+                    Entrar
+                </button>
+
                 <p id="mensagem-login" role="status"></p>
+
             </form>
 
-            <a class="voltar" href="index.html">← Voltar ao início</a>
+            <a class="voltar" href="index.html">
+                ← Voltar ao início
+            </a>
+
         </section>
     </main>
 
@@ -120,16 +135,58 @@
         <p>&copy; 2026 - Meu Portfólio Escolar</p>
     </footer>
 
-    <script>
-        document.getElementById("form-login")
-            .addEventListener("submit", function(event) {
-                event.preventDefault();
+    <script type="module">
 
-                document.getElementById("mensagem-login").textContent =
-                    "A tela está pronta. A autenticação será conectada ao Supabase na próxima etapa.";
-            });
+        import { supabase } from './js/supabase.js';
+
+        const formulario = document.getElementById('form-login');
+        const mensagem = document.getElementById('mensagem-login');
+        const botao = document.getElementById('botao-login');
+
+        formulario.addEventListener('submit', async function(event) {
+
+            event.preventDefault();
+
+            const email = document.getElementById('email').value.trim();
+            const senha = document.getElementById('senha').value;
+
+            mensagem.textContent = 'Verificando acesso...';
+            mensagem.style.color = '#6c4be8';
+
+            botao.disabled = true;
+
+            try {
+
+                const { data, error } = await supabase.auth.signInWithPassword({
+                    email: email,
+                    password: senha
+                });
+
+                if (error) {
+                    throw error;
+                }
+
+                mensagem.textContent = 'Login realizado com sucesso!';
+                mensagem.style.color = 'green';
+
+                window.location.href = 'dashboard.html';
+
+            } catch (error) {
+
+                mensagem.textContent = 'E-mail ou senha incorretos. Tente novamente.';
+                mensagem.style.color = 'red';
+
+                console.error('Erro no login:', error);
+
+            } finally {
+
+                botao.disabled = false;
+
+            }
+
+        });
+
     </script>
 
 </body>
 </html>
-
