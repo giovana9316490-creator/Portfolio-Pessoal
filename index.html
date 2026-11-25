@@ -4,58 +4,231 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giovana portfolio 💖</title>
-    <link rel="stylesheet" href="css/style.css">
+
+    <title>Giovana Silva | Portfólio</title>
+    <meta name="description" content="Portfólio pessoal de Giovana Silva. Tecnologia, programação e projetos.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/home.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <a href="index.html">Início</a>
+
+<body id="top">
+
+    <canvas id="particles"></canvas>
+    <div class="mouse-glow"></div>
+
+    <header class="header">
+        <a href="index.html" class="logo">G<span>.</span>S</a>
+
+        <nav class="navigation">
+            <a href="index.html" class="active">Início</a>
             <a href="quem-sou-eu.html">Quem sou eu</a>
             <a href="portfolio.html">Portfólio</a>
             <a href="contato.html">Contato</a>
-            <a href="login.html">🖤</a>
         </nav>
+
+        <a href="login.html" class="admin-link" aria-label="Área administrativa">
+            <span>↗</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
     </header>
 
     <main>
+
         <section class="hero">
-            <p>MEU PORTFÓLIO </p>
-            <h1>Olá! Seja bem-vindo(a).</h1>
-            <p>Conheça minha história, meus projetos e tudo o que estou aprendendo.</p>
-            <a class="botao" href="portfolio.html">Ver meus projetos</a>
-        </section>
 
-        <section class="sobre">
-            <h2>Sobre mim</h2>
-            <p>Este espaço apresenta minha trajetoria, minhas habilidades e meus trabalhos desenvolvidos durante minha formação.</p>
-            <a href="quem-sou-eu.html">Conheça minha história</a>
-        </section>
-
-        <section class="destaques">
-            <h2>O que você encontrará aqui?</h2>
-            <div class="cards">
-                <article>
-                    <h3>Minha trajetória</h3>
-                    <p>Minha história e evolução escolar.</p>
-                </article>
-                <article>
-                    <h3>Meus projetos</h3>
-                    <p>Trabalhos e experiências práticas.</p>
-                </article>
-                <article>
-                    <h3>Contato</h3>
-                    <p>Um espaço para enviar mensagens.</p>
-                </article>
+            <div class="hero-top">
+                <span>PORTFÓLIO PESSOAL — 2026</span>
+                <span>TECNOLOGIA / DESENVOLVIMENTO WEB</span>
             </div>
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="small-title">OLÁ, EU SOU</span>
+
+                    <h1>
+                        GIOVANA
+                        <span>SILVA<span class="red-dot">.</span></span>
+                    </h1>
+
+                    <p class="description">
+                        Estudante de tecnologia, apaixonada por criatividade,
+                        programação e desenvolvimento de experiências digitais.
+                        Transformando ideias em projetos.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="portfolio.html" class="btn-primary">
+                            VER PROJETOS ↗
+                        </a>
+
+                        <a href="quem-sou-eu.html" class="btn-secondary">
+                            CONHEÇA MINHA HISTÓRIA
+                        </a>
+                    </div>
+
+                    <div class="hero-social">
+                        <span>DESIGN</span>
+                        <span>•</span>
+                        <span>HTML & CSS</span>
+                        <span>•</span>
+                        <span>JAVASCRIPT</span>
+                    </div>
+
+                </div>
+
+                <div class="hero-photo">
+                    <div class="photo-frame">
+                        <img
+                            src="img/minha-foto.png"
+                            alt="Fotografia de Giovana Silva"
+                        >
+                    </div>
+
+                    <div class="photo-label">
+                        <span>01 / 04</span>
+                        <span>GIOVANA SILVA</span>
+                    </div>
+                </div>
+
+                <div class="hero-number">01</div>
+
+            </div>
+
+            <div class="hero-bottom">
+                <span>CRIATIVIDADE EM CADA DETALHE</span>
+                <a href="#sobre">ROLE PARA EXPLORAR ↓</a>
+            </div>
+
         </section>
+
+        <section class="about-section reveal" id="sobre">
+
+            <div class="section-heading">
+                <span>01 — SOBRE MIM</span>
+                <h2>MAIS QUE CÓDIGO.<br><span>UMA HISTÓRIA.</span></h2>
+            </div>
+
+            <div class="about-content">
+                <p>
+                    Sou uma estudante que está construindo sua trajetória
+                    no universo da tecnologia. Gosto de transformar ideias
+                    em projetos, explorar novas ferramentas e aprender
+                    constantemente.
+                </p>
+
+                <a href="quem-sou-eu.html" class="text-link">
+                    CONHEÇA MINHA TRAJETÓRIA ↗
+                </a>
+            </div>
+
+        </section>
+
+        <section class="projects-section reveal">
+
+            <div class="section-heading">
+                <span>02 — MEU TRABALHO</span>
+                <h2>PROJETOS <span>SELECIONADOS.</span></h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <a href="portfolio.html" class="project-card">
+                    <div class="project-image project-one">
+                        <span>01</span>
+                        <div>WEB<br>DESIGN</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>DESENVOLVIMENTO WEB</h3>
+                        <span>HTML / CSS / JS ↗</span>
+                    </div>
+                </a>
+
+                <a href="portfolio.html" class="project-card">
+                    <div class="project-image project-two">
+                        <span>02</span>
+                        <div>DATABASE<br>PROJECTS</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>BANCO DE DADOS</h3>
+                        <span>SUPABASE / MYSQL ↗</span>
+                    </div>
+                </a>
+
+                <a href="portfolio.html" class="project-card">
+                    <div class="project-image project-three">
+                        <span>03</span>
+                        <div>CREATIVE<br>IDEAS</div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>PROJETOS CRIATIVOS</h3>
+                        <span>DESIGN / TECNOLOGIA ↗</span>
+                    </div>
+                </a>
+
+            </div>
+
+            <a href="portfolio.html" class="all-projects">
+                EXPLORAR TODOS OS PROJETOS ↗
+            </a>
+
+        </section>
+
+        <section class="skills-section reveal">
+
+            <div class="section-heading">
+                <span>03 — CONHECIMENTOS</span>
+                <h2>TECNOLOGIAS <span>& HABILIDADES.</span></h2>
+            </div>
+
+            <div class="skills-list">
+                <div><span>01</span> HTML5 <small>ESTRUTURA</small></div>
+                <div><span>02</span> CSS3 <small>ESTILIZAÇÃO</small></div>
+                <div><span>03</span> JAVASCRIPT <small>INTERATIVIDADE</small></div>
+                <div><span>04</span> MYSQL <small>BANCO DE DADOS</small></div>
+                <div><span>05</span> SUPABASE <small>BACKEND</small></div>
+            </div>
+
+        </section>
+
+        <section class="contact-section reveal" id="contato">
+
+            <span>04 — VAMOS CONVERSAR?</span>
+
+            <h2>
+                TEM UMA IDEIA?
+                <span>VAMOS CRIAR.</span>
+            </h2>
+
+            <a href="contato.html" class="contact-button">
+                ENTRE EM CONTATO ↗
+            </a>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Meu Portfólio Escolar</p>
+    <footer class="footer">
+
+        <a href="index.html" class="logo">G<span>.</span>S</a>
+
+        <p>© 2026 — GIOVANA SILVA</p>
+
+        <a href="#top">VOLTAR AO TOPO ↑</a>
+
     </footer>
-    <script src="js/supabase.js"></script>
-<script src="js/home.js"></script>
+
+    <script src="js/home.js"></script>
+
 </body>
 </html>
-
