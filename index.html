@@ -1,234 +1,143 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- SEO -->
+  <title>Seu Nome | Desenvolvedor Web & Especialista em Soluções Digitais</title>
+  <meta name="description" content="Portfólio oficial de Seu Nome. Desenvolvimento de sites institucionais, sistemas para restaurantes e plataformas de tecnologia com foco em performance, SEO e GEO." />
+  <meta name="keywords" content="Desenvolvedor Web, Criação de Sites, Portfólio, Zynk TI, Sakura House, Carlos Chagas, SEO, GEO" />
+  <meta name="author" content="Seu Nome" />
+  <link rel="canonical" href="https://portfolio-pessoal-phi-nine.vercel.app/index.html" />
 
-    <title>Giovana Silva | Portfólio</title>
-    <meta name="description" content="Portfólio pessoal de Giovana Silva. Tecnologia, programação e projetos.">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Seu Nome | Desenvolvedor Web & Soluções Digitais" />
+  <meta property="og:description" content="Conheça os meus projetos em desenvolvimento web: portais municipais, gastronomia e tecnologia." />
+  <meta property="og:image" content="https://portfolio-pessoal-phi-nine.vercel.app/img/logo.png" />
+  <meta property="og:url" content="https://portfolio-pessoal-phi-nine.vercel.app/index.html" />
+  <meta property="og:type" content="website" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- GEO (Schema.org para Inteligências Artificiais) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Seu Nome Completo",
+    "url": "https://portfolio-pessoal-phi-nine.vercel.app/",
+    "image": "https://portfolio-pessoal-phi-nine.vercel.app/img/foto-perfil.jpg",
+    "jobTitle": "Desenvolvedor Web & Criador de Produtos Digitais",
+    "knowsAbout": ["Desenvolvimento Web", "HTML5", "CSS3", "JavaScript", "Supabase", "SEO", "GEO"],
+    "workExample": [
+      {
+        "@type": "WebSite",
+        "name": "Portal Carlos Chagas",
+        "url": "https://carloschagas.vercel.app/",
+        "description": "Portal informativo e institucional dedicado à cidade de Carlos Chagas."
+      },
+      {
+        "@type": "WebSite",
+        "name": "Sakura House",
+        "url": "https://sakurahouse-silk.vercel.app/",
+        "description": "Plataforma digital e cardápio interativo para restaurante de culinária asiática."
+      },
+      {
+        "@type": "WebSite",
+        "name": "Zynk Tecnologia",
+        "url": "https://zynk-roan.vercel.app/",
+        "description": "Site corporativo para empresa de soluções em Tecnologia da Informação."
+      }
+    ]
+  }
+  </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/home.css">
+  <!-- Caminhos das suas pastas -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
 </head>
+<body>
+  <header>
+    <a href="index.html" class="logo-container">
+      <!-- Guarde a sua logo dentro da pasta img/ como logo.png -->
+      <img src="img/logo.png" alt="Logo Oficial" onerror="this.style.display='none'" />
+      <span>Seu Nome</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Início</a></li>
+        <li><a href="quem-sou-eu.html">Quem Sou Eu</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html" class="btn-login-nav">Área Restrita</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<body id="top">
+  <main class="container">
+    <section class="hero">
+      <div class="hero-text">
+        <span class="tag">Desenvolvimento Web & Estratégia Digital</span>
+        <h1>Transformo ideias em <span>experiências digitais</span> de alto impacto.</h1>
+        <p>
+          Especialista na criação de sites modernos, rápidos e estruturados para ranquear no Google e em mecanismos de Inteligência Artificial. Do setor público à gastronomia e tecnologia corporativa.
+        </p>
+        <div class="btn-group">
+          <a href="portfolio.html" class="btn btn-primary">Ver Meus Projetos</a>
+          <a href="contato.html" class="btn btn-outline">Entrar em Contato</a>
+        </div>
+      </div>
 
-    <canvas id="particles"></canvas>
-    <div class="mouse-glow"></div>
+      <!-- ESPAÇO RESERVADO PARA SUA FOTO (Guarde em img/foto-perfil.jpg) -->
+      <div class="photo-frame">
+        <img src="img/foto-perfil.jpg" alt="Foto de Seu Nome" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <div style="display:none; text-align:center; padding: 20px; color: #9ca3af;">
+          <p><strong>Sua Foto Aqui</strong></p>
+          <small>Guarde o ficheiro em <code>img/foto-perfil.jpg</code></small>
+        </div>
+      </div>
+    </section>
 
-    <header class="header">
-        <a href="index.html" class="logo">G<span>.</span>S</a>
+    <section style="margin-top: 4rem;">
+      <h2 class="section-title">Projetos em Destaque</h2>
+      <p class="section-subtitle">Soluções reais desenvolvidas e publicadas.</p>
+      
+      <div class="grid-3">
+        <article class="card">
+          <div>
+            <span class="tag">Site da Cidade</span>
+            <h3>Carlos Chagas</h3>
+            <p>Portal informativo dedicado à cidade de Carlos Chagas, reunindo cultura, história e utilidade pública com navegação rápida.</p>
+          </div>
+          <a href="https://carloschagas.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Acessar Site ↗</a>
+        </article>
 
-        <nav class="navigation">
-            <a href="index.html" class="active">Início</a>
-            <a href="quem-sou-eu.html">Quem sou eu</a>
-            <a href="portfolio.html">Portfólio</a>
-            <a href="contato.html">Contato</a>
-        </nav>
+        <article class="card">
+          <div>
+            <span class="tag">Meu Restaurante</span>
+            <h3>Sakura House</h3>
+            <p>Plataforma oficial do restaurante Sakura House. Experiência visual imersiva com apresentação do cardápio e foco em conversão.</p>
+          </div>
+          <a href="https://sakurahouse-silk.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Acessar Site ↗</a>
+        </article>
 
-        <a href="login.html" class="admin-link" aria-label="Área administrativa">
-            <span>↗</span>
-        </a>
+        <article class="card">
+          <div>
+            <span class="tag">Empresa de TI</span>
+            <h3>Zynk Tecnologia</h3>
+            <p>Portal institucional para empresa de Tecnologia da Informação, projetado para transmitir autoridade, inovação e captação de clientes.</p>
+          </div>
+          <a href="https://zynk-roan.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Acessar Site ↗</a>
+        </article>
+      </div>
+    </section>
+  </main>
 
-        <button class="menu-toggle" aria-label="Abrir menu">☰</button>
-    </header>
+  <footer>
+    <p>© 2026 Seu Nome — Todos os direitos reservados.</p>
+  </footer>
 
-    <main>
-
-        <section class="hero">
-
-            <div class="hero-top">
-                <span>PORTFÓLIO PESSOAL — 2026</span>
-                <span>TECNOLOGIA / DESENVOLVIMENTO WEB</span>
-            </div>
-
-            <div class="hero-content">
-
-                <div class="hero-text">
-
-                    <span class="small-title">OLÁ, EU SOU</span>
-
-                    <h1>
-                        GIOVANA
-                        <span>SILVA<span class="red-dot">.</span></span>
-                    </h1>
-
-                    <p class="description">
-                        Estudante de tecnologia, apaixonada por criatividade,
-                        programação e desenvolvimento de experiências digitais.
-                        Transformando ideias em projetos.
-                    </p>
-
-                    <div class="hero-buttons">
-                        <a href="portfolio.html" class="btn-primary">
-                            VER PROJETOS ↗
-                        </a>
-
-                        <a href="quem-sou-eu.html" class="btn-secondary">
-                            CONHEÇA MINHA HISTÓRIA
-                        </a>
-                    </div>
-
-                    <div class="hero-social">
-                        <span>DESIGN</span>
-                        <span>•</span>
-                        <span>HTML & CSS</span>
-                        <span>•</span>
-                        <span>JAVASCRIPT</span>
-                    </div>
-
-                </div>
-
-                <div class="hero-photo">
-                    <div class="photo-frame">
-                        <img
-                            src="img/minha-foto.png"
-                            alt="Fotografia de Giovana Silva"
-                        >
-                    </div>
-
-                    <div class="photo-label">
-                        <span>01 / 04</span>
-                        <span>GIOVANA SILVA</span>
-                    </div>
-                </div>
-
-                <div class="hero-number">01</div>
-
-            </div>
-
-            <div class="hero-bottom">
-                <span>CRIATIVIDADE EM CADA DETALHE</span>
-                <a href="#sobre">ROLE PARA EXPLORAR ↓</a>
-            </div>
-
-        </section>
-
-        <section class="about-section reveal" id="sobre">
-
-            <div class="section-heading">
-                <span>01 — SOBRE MIM</span>
-                <h2>MAIS QUE CÓDIGO.<br><span>UMA HISTÓRIA.</span></h2>
-            </div>
-
-            <div class="about-content">
-                <p>
-                    Sou uma estudante que está construindo sua trajetória
-                    no universo da tecnologia. Gosto de transformar ideias
-                    em projetos, explorar novas ferramentas e aprender
-                    constantemente.
-                </p>
-
-                <a href="quem-sou-eu.html" class="text-link">
-                    CONHEÇA MINHA TRAJETÓRIA ↗
-                </a>
-            </div>
-
-        </section>
-
-        <section class="projects-section reveal">
-
-            <div class="section-heading">
-                <span>02 — MEU TRABALHO</span>
-                <h2>PROJETOS <span>SELECIONADOS.</span></h2>
-            </div>
-
-            <div class="projects-grid">
-
-                <a href="portfolio.html" class="project-card">
-                    <div class="project-image project-one">
-                        <span>01</span>
-                        <div>WEB<br>DESIGN</div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3>DESENVOLVIMENTO WEB</h3>
-                        <span>HTML / CSS / JS ↗</span>
-                    </div>
-                </a>
-
-                <a href="portfolio.html" class="project-card">
-                    <div class="project-image project-two">
-                        <span>02</span>
-                        <div>DATABASE<br>PROJECTS</div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3>BANCO DE DADOS</h3>
-                        <span>SUPABASE / MYSQL ↗</span>
-                    </div>
-                </a>
-
-                <a href="portfolio.html" class="project-card">
-                    <div class="project-image project-three">
-                        <span>03</span>
-                        <div>CREATIVE<br>IDEAS</div>
-                    </div>
-
-                    <div class="project-info">
-                        <h3>PROJETOS CRIATIVOS</h3>
-                        <span>DESIGN / TECNOLOGIA ↗</span>
-                    </div>
-                </a>
-
-            </div>
-
-            <a href="portfolio.html" class="all-projects">
-                EXPLORAR TODOS OS PROJETOS ↗
-            </a>
-
-        </section>
-
-        <section class="skills-section reveal">
-
-            <div class="section-heading">
-                <span>03 — CONHECIMENTOS</span>
-                <h2>TECNOLOGIAS <span>& HABILIDADES.</span></h2>
-            </div>
-
-            <div class="skills-list">
-                <div><span>01</span> HTML5 <small>ESTRUTURA</small></div>
-                <div><span>02</span> CSS3 <small>ESTILIZAÇÃO</small></div>
-                <div><span>03</span> JAVASCRIPT <small>INTERATIVIDADE</small></div>
-                <div><span>04</span> MYSQL <small>BANCO DE DADOS</small></div>
-                <div><span>05</span> SUPABASE <small>BACKEND</small></div>
-            </div>
-
-        </section>
-
-        <section class="contact-section reveal" id="contato">
-
-            <span>04 — VAMOS CONVERSAR?</span>
-
-            <h2>
-                TEM UMA IDEIA?
-                <span>VAMOS CRIAR.</span>
-            </h2>
-
-            <a href="contato.html" class="contact-button">
-                ENTRE EM CONTATO ↗
-            </a>
-
-        </section>
-
-    </main>
-
-    <footer class="footer">
-
-        <a href="index.html" class="logo">G<span>.</span>S</a>
-
-        <p>© 2026 — GIOVANA SILVA</p>
-
-        <a href="#top">VOLTAR AO TOPO ↑</a>
-
-    </footer>
-
-    <script src="js/home.js"></script>
-
+  <!-- Os seus scripts existentes -->
+  <script src="js/supabase.js"></script>
+  <script src="js/home.js"></script>
 </body>
 </html>
