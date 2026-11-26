@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio-pessoal-phi-nine.vercel.app/sitemap.xml
