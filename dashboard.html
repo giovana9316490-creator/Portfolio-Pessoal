@@ -1,140 +1,450 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard | Meu Portfólio</title>
+
+    <title>Dashboard | Giovana Silva</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        .painel {
-            padding: 40px 0;
-        }
-
-        .painel-topo {
-            background: linear-gradient(135deg, #382477, #8062f0);
-            color: white;
-            padding: 35px;
-            border-radius: 18px;
-            margin-bottom: 30px;
-        }
-
-        .painel-topo h1 {
-            margin-bottom: 10px;
-        }
-
-        .painel-grid {
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 22px;
-        }
-
-        .painel-card {
-            background: white;
-            padding: 28px;
-            border-radius: 16px;
-            border: 1px solid #e8e1ff;
-            box-shadow: 0 8px 25px rgba(50, 30, 100, 0.06);
-        }
-
-        .painel-card h2 {
-            color: #382477;
-            margin-bottom: 12px;
-        }
-
-        .painel-card p {
-            margin-bottom: 20px;
-        }
-
-        .painel-botao {
-            display: inline-block;
-            padding: 11px 20px;
-            background: #6c4be8;
-            color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-
-        .painel-botao:hover {
-            background: #382477;
-        }
-
-        .aviso-painel {
-            margin-top: 25px;
-            padding: 18px;
-            background: #eee9ff;
-            border-radius: 12px;
-        }
-
-        @media (max-width: 650px) {
-            .painel-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .painel-topo {
-                padding: 25px;
-            }
-        }
-    </style>
 </head>
+
 <body>
 
-    <header>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="quem-sou-eu.html">Quem sou eu</a>
-            <a href="portfolio.html">Portfólio</a>
-            <a href="contato.html">Contato</a>
-            <a href="login.html">Login</a>
-        </nav>
+    <header class="site-header">
+
+        <a href="index.html" class="brand">
+            G<span>.</span>S
+        </a>
+
+        <span class="header-mark">
+            PAINEL ADMINISTRATIVO
+        </span>
+
+        <button id="logout" class="btn secondary">
+            SAIR ↗
+        </button>
+
     </header>
 
-    <main class="painel">
-        <section class="painel-topo">
-            <h1>Dashboard</h1>
-            <p>Área de administração do meu portfólio escolar.</p>
-        </section>
 
-        <section class="painel-grid">
-            <article class="painel-card">
-                <h2>Meus projetos</h2>
-                <p>
-                    Futuramente, você poderá cadastrar projetos,
-                    editar informações, adicionar links e publicar trabalhos.
-                </p>
-                <a class="painel-botao" href="portfolio.html">
-                    Ver portfólio
-                </a>
-            </article>
+    <main class="container">
 
-            <article class="painel-card">
-                <h2>Mensagens recebidas</h2>
-                <p>
-                    Futuramente, você poderá consultar as mensagens
-                    enviadas pelo formulário de contato.
-                </p>
-                <a class="painel-botao" href="contato.html">
-                    Ver formulário
-                </a>
-            </article>
-        </section>
+        <section class="page-hero">
 
-        <section class="aviso-painel">
-            <strong>Importante:</strong>
-            <p>
-                Esta página é apenas a estrutura visual.
-                O acesso protegido e as operações do banco de dados
-                serão implementados na etapa de integração com o Supabase.
+            <div class="eyebrow red">
+                ÁREA ADMINISTRATIVA
+            </div>
+
+            <h1 class="display">
+
+                DASH
+
+                <br>
+
+                <span class="outline">
+                    BOARD.
+                </span>
+
+            </h1>
+
+            <p class="body-copy">
+
+                Gerencie os projetos publicados
+                no seu portfólio.
+
             </p>
+
         </section>
+
+
+        <div id="admin-status" class="notice">
+            Verificando autenticação...
+        </div>
+
+
+        <!-- CADASTRO -->
+
+        <section class="section">
+
+            <div class="eyebrow">
+                01 / NOVO PROJETO
+            </div>
+
+            <h2 class="section-title">
+
+                CADASTRAR
+
+                <span>PROJETO.</span>
+
+            </h2>
+
+            <br><br>
+
+
+            <form id="project-form" class="form-grid">
+
+                <div class="field">
+
+                    <label for="nome">
+                        Nome do projeto
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        required
+                        maxlength="120">
+
+                </div>
+
+
+                <div class="field">
+
+                    <label for="link">
+                        Link do projeto
+                    </label>
+
+                    <input
+                        type="url"
+                        id="link"
+                        name="link"
+                        required
+                        placeholder="https://">
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label for="descricao">
+                        Descrição
+                    </label>
+
+                    <textarea
+                        id="descricao"
+                        name="descricao"
+                        required></textarea>
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label for="foto">
+                        URL da imagem
+                    </label>
+
+                    <input
+                        type="url"
+                        id="foto"
+                        name="foto"
+                        placeholder="https://">
+
+                </div>
+
+
+                <div class="field full">
+
+                    <button type="submit" class="btn">
+                        SALVAR PROJETO ↗
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+
+        <!-- LISTAGEM -->
+
+        <section class="section">
+
+            <div class="eyebrow">
+                02 / GERENCIAMENTO
+            </div>
+
+            <h2 class="section-title">
+
+                MEUS
+
+                <span>PROJETOS.</span>
+
+            </h2>
+
+            <br><br>
+
+
+            <div style="overflow-x:auto;">
+
+                <table class="admin-table">
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Projeto</th>
+
+                            <th>Link</th>
+
+                            <th>Ação</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="project-rows">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Meu Portfólio Escolar</p>
+
+    <footer class="site-footer">
+
+        <span>© 2026 GIOVANA SILVA</span>
+
+        <a href="index.html">
+            VOLTAR AO SITE ↗
+        </a>
+
     </footer>
 
-</body>
-</html>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", async function() {
+
+            const client = window.supabaseClient;
+
+            const status = document.getElementById("admin-status");
+
+            const rows = document.getElementById("project-rows");
+
+            const form = document.getElementById("project-form");
+
+
+            if (!window.supabaseReady || !client) {
+
+                status.textContent = "Configure o Supabase antes de acessar.";
+
+                status.className = "notice error";
+
+                return;
+
+            }
+
+
+            // VERIFICAR AUTENTICAÇÃO
+
+            const { data: { session }, error: sessionError } =
+                await client.auth.getSession();
+
+            if (sessionError || !session) {
+
+                window.location.href = "login.html";
+
+                return;
+
+            }
+
+
+            status.textContent = "Acesso autorizado.";
+
+            status.className = "notice success";
+
+
+            // CARREGAR PROJETOS
+
+            async function carregarProjetos() {
+
+                const { data, error } = await client
+                    .from("projetos")
+                    .select("id,nome,link")
+                    .order("id", { ascending: true });
+
+
+                if (error) {
+
+                    status.textContent = "Erro ao carregar: " + error.message;
+
+                    status.className = "notice error";
+
+                    return;
+
+                }
+
+
+                rows.innerHTML = "";
+
+
+                data.forEach(projeto => {
+
+                    const tr = document.createElement("tr");
+
+                    const nome = document.createElement("td");
+
+                    nome.textContent = projeto.nome;
+
+
+                    const linkCell = document.createElement("td");
+
+                    const link = document.createElement("a");
+
+                    link.href = projeto.link;
+
+                    link.target = "_blank";
+
+                    link.rel = "noopener noreferrer";
+
+                    link.textContent = "ABRIR ↗";
+
+                    link.className = "text-link";
+
+                    linkCell.appendChild(link);
+
+
+                    const action = document.createElement("td");
+
+                    const button = document.createElement("button");
+
+                    button.textContent = "EXCLUIR";
+
+                    button.className = "btn secondary";
+
+                    button.type = "button";
+
+
+                    button.addEventListener("click", async function() {
+
+                        if (!confirm("Deseja excluir este projeto?")) {
+                            return;
+                        }
+
+                        const { error } = await client
+                            .from("projetos")
+                            .delete()
+                            .eq("id", projeto.id);
+
+
+                        if (error) {
+
+                            status.textContent = error.message;
+
+                            status.className = "notice error";
+
+                            return;
+
+                        }
+
+                        carregarProjetos();
+
+                    });
+
+
+                    action.appendChild(button);
+
+                    tr.append(nome, linkCell, action);
+
+                    rows.appendChild(tr);
+
+                });
+
+            }
+
+
+            // CADASTRAR PROJETO
+
+            form.addEventListener("submit", async function(event) {
+
+                event.preventDefault();
+
+
+                const nome = document.getElementById("nome").value;
+
+                const descricao = document.getElementById("descricao").value;
+
+                const link = document.getElementById("link").value;
+
+                const foto = document.getElementById("foto").value;
+
+
+                const novoProjeto = {
+
+                    nome: nome,
+
+                    "descrição": descricao,
+
+                    link: link,
+
+                    foto: foto || null
+
+                };
+
+
+                const { error } = await client
+                    .from("projetos")
+                    .insert([novoProjeto]);
+
+
+                if (error) {
+
+                    status.textContent = "Erro ao salvar: " + error.message;
+
+                    status.className = "notice error";
+
+                    return;
+
+                }
+
+
+                status.textContent = "Projeto cadastrado com sucesso!";
+
+                status.className = "notice success";
+
+                form.reset();
+
+                carregarProjetos();
+
+            });
+
+
+            // SAIR
+
+            document.getElementById("logout")
+                .addEventListener("click", async function() {
+
+                    await client.auth.signOut();
+
+                    window.location.href = "login.html";
+
+                });
+
+
+            carregarProjetos();
+
+        });
+
+    </script>
+
+</body>
+
+</html>
