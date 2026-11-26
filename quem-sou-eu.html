@@ -1,80 +1,78 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quem Sou Eu | Meu Portfólio</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quem Sou Eu | Seu Nome</title>
+  <meta name="description" content="Conheça a trajetória, habilidades técnicas e experiência de Seu Nome em desenvolvimento web, SEO, GEO e gestão de projetos digitais." />
+  <link rel="canonical" href="https://portfolio-pessoal-phi-nine.vercel.app/quem-sou-eu.html" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <header>
+    <a href="index.html" class="logo-container">
+      <img src="img/logo.png" alt="Logo Oficial" onerror="this.style.display='none'" />
+      <span>Seu Nome</span>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="quem-sou-eu.html" class="active">Quem Sou Eu</a></li>
+        <li><a href="portfolio.html">Portfólio</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="login.html" class="btn-login-nav">Área Restrita</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <header>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="quem-sou-eu.html">Quem sou eu</a>
-            <a href="portfolio.html">Portfólio</a>
-            <a href="contato.html">Contato</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+  <main class="container">
+    <section class="hero" style="min-height: auto; margin-bottom: 4rem;">
+      <div class="photo-frame">
+        <img src="img/foto-perfil.jpg" alt="Foto de Seu Nome" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
+        <div style="display:none; text-align:center; padding: 20px; color: #9ca3af;">
+          <p><strong>Sua Foto Aqui</strong></p>
+          <small><code>img/foto-perfil.jpg</code></small>
+        </div>
+      </div>
 
-    <main>
-        <section class="hero">
-            <p>MINHA HISTÓRIA</p>
-            <h1>Quem sou eu?</h1>
-            <p>Conheça minha trajetória, minhas experiências e meus objetivos.</p>
-        </section>
+      <div class="hero-text">
+        <span class="tag">Trajetória & Visão</span>
+        <h1 style="font-size: 2.3rem;">Desenvolvimento focado em <span>resultado e performance</span>.</h1>
+        <p>
+          Sou desenvolvedor web e empreendedor digital, dedicado a construir aplicações modernas que resolvem problemas reais de negócios, instituições e empreendimentos locais.
+        </p>
+        <p>
+          Meu trabalho une código limpo, bancos de dados modernos (como Supabase) e arquitetura otimizada para <strong>SEO</strong> e <strong>GEO</strong>, garantindo que cada projeto seja encontrado tanto no Google quanto por inteligências artificiais.
+        </p>
+        <div class="btn-group">
+          <a href="portfolio.html" class="btn btn-primary">Explorar Portfólio</a>
+        </div>
+      </div>
+    </section>
 
-        <section class="sobre">
-            <h2>Minha trajetória escolar</h2>
-            <p>
-                Minha trajetória escolar é formada por aprendizados,
-                desafios e experiências que contribuíram para meu
-                desenvolvimento pessoal e acadêmico.
-            </p>
-            <p>
-                Ao longo dos anos, tive a oportunidade de adquirir
-                conhecimentos, desenvolver habilidades e participar
-                de atividades que ampliaram minha visão de futuro.
-            </p>
-        </section>
+    <section>
+      <h2 class="section-title">Minhas Especialidades</h2>
+      <p class="section-subtitle">Pilares técnicos aplicados em cada entrega.</p>
 
-        <section class="destaques">
-            <h2>O que aprendi</h2>
-            <div class="cards">
-                <article>
-                    <h3>Conhecimento</h3>
-                    <p>Aprendi conteúdos importantes para minha formação.</p>
-                </article>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Desenvolvimento Web Full-Stack</h3>
+          <p>Criação de interfaces responsivas (HTML5, CSS3, JavaScript) integradas a autenticação e bases de dados modernas com Supabase.</p>
+        </div>
+        <div class="card">
+          <h3>SEO & GEO Técnico</h3>
+          <p>Estruturação semântica e dados estruturados (JSON-LD / Schema.org) para destacar marcas nas buscas tradicionais e respostas de IA.</p>
+        </div>
+        <div class="card">
+          <h3>Soluções para Negócios</h3>
+          <p>Experiência prática na criação de plataformas reais para o setor gastronômico (Sakura House), corporativo de TI (Zynk) e portais locais.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                <article>
-                    <h3>Responsabilidade</h3>
-                    <p>Desenvolvi organização, compromisso e dedicação.</p>
-                </article>
-
-                <article>
-                    <h3>Tecnologia</h3>
-                    <p>Explorei ferramentas e projetos relacionados à tecnologia.</p>
-                </article>
-            </div>
-        </section>
-
-        <section class="sobre">
-            <h2>Meus objetivos</h2>
-            <p>
-                Quero continuar aprendendo, aprimorar minhas habilidades
-                e construir novas oportunidades por meio dos meus estudos
-                e projetos.
-            </p>
-            <a href="portfolio.html">Conheça meus projetos →</a>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2026 - Meu Portfólio Escolar</p>
-    </footer>
-
+  <footer>
+    <p>© 2026 Seu Nome — Todos os direitos reservados.</p>
+  </footer>
 </body>
 </html>
-
