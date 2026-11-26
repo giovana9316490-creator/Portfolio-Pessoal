@@ -1,14 +1,23 @@
 
-import { createClient } from
-'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
+const SUPABASE_URL = "https://qjuieeosgukjosqetyxy.supabase.co";
 
+const SUPABASE_ANON_KEY = "sb_publishable_5JVWLhvVqlPZbwtTPWKiaw_3v0a9eJd";
 
-const SUPABASE_URL = 'https://qjuieeosgukjosqetyxy.supabase.co';
+window.supabaseClient = null;
 
+window.supabaseReady = false;
 
-const SUPABASE_PUBLISHABLE_KEY = 'sb_publishable_5JVWLhvVqlPZbwtTPWKiaw_3v0a9eJd';
+if (
+    window.supabase &&
+    SUPABASE_URL.startsWith("https://") &&
+    SUPABASE_ANON_KEY.length > 20
+) {
 
-export const supabase = createClient(
-    SUPABASE_URL,
-    SUPABASE_PUBLISHABLE_KEY
-);
+    window.supabaseClient = window.supabase.createClient(
+        SUPABASE_URL,
+        SUPABASE_ANON_KEY
+    );
+
+    window.supabaseReady = true;
+
+}
