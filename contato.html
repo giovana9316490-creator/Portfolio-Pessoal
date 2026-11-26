@@ -1,61 +1,271 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contato | Seu Nome</title>
-  <meta name="description" content="Entre em contato com Seu Nome para orçamentos de sites, parcerias comerciais ou dúvidas sobre os projetos." />
-  <link rel="canonical" href="https://portfolio-pessoal-phi-nine.vercel.app/contato.html" />
-  <link rel="stylesheet" href="css/style.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contato | Giovana Silva</title>
+
+    <meta name="description"
+        content="Entre em contato com Giovana Silva para conversar sobre tecnologia e projetos.">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-  <header>
-    <a href="index.html" class="logo-container">
-      <img src="img/logo.png" alt="Logo Oficial" onerror="this.style.display='none'" />
-      <span>Seu Nome</span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="quem-sou-eu.html">Quem Sou Eu</a></li>
-        <li><a href="portfolio.html">Portfólio</a></li>
-        <li><a href="contato.html" class="active">Contato</a></li>
-        <li><a href="login.html" class="btn-login-nav">Área Restrita</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="container">
-    <div class="hero" style="min-height: auto; align-items: start;">
-      <div>
-        <span class="tag">Fale Comigo</span>
-        <h1 class="section-title">Vamos tirar o seu projeto do papel.</h1>
-        <p class="section-subtitle" style="margin-bottom: 1.5rem;">
-          Precisa de um site profissional, quer saber mais sobre a Zynk TI ou falar sobre o Sakura House? Envie a sua mensagem.
-        </p>
+    <header class="site-header">
 
-        <div class="card">
-          <h3>Informações Diretas</h3>
-          <p style="margin-bottom: 0.5rem;"><strong>E-mail:</strong> contato@seudominio.com</p>
-          <p style="margin-bottom: 0.5rem;"><strong>Localização:</strong> Carlos Chagas / MG — Brasil</p>
-          <p style="margin-bottom: 0;"><strong>Atendimento:</strong> Projetos Web, Consultoria e Parcerias</p>
-        </div>
-      </div>
+        <a href="index.html" class="brand">
+            G<span>.</span>S
+        </a>
 
-      <form class="contact-form" action="https://formsubmit.co/seu-email@aqui.com" method="POST">
-        <input type="text" name="name" placeholder="Seu Nome Completo" required />
-        <input type="email" name="email" placeholder="Seu Melhor E-mail" required />
-        <input type="text" name="subject" placeholder="Assunto (Ex: Novo Site, Zynk TI, Parceria)" required />
-        <textarea name="message" rows="5" placeholder="Escreva a sua mensagem aqui..." required></textarea>
-        <button type="submit" class="btn btn-primary" style="font-size:1rem;">
-          Enviar Mensagem
+        <button class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+            ☰
         </button>
-      </form>
-    </div>
-  </main>
 
-  <footer>
-    <p>© 2026 Seu Nome — Todos os direitos reservados.</p>
-  </footer>
+        <nav class="nav">
+
+            <a href="index.html">Início</a>
+
+            <a href="quem-sou-eu.html">Quem sou eu</a>
+
+            <a href="portfolio.html">Portfólio</a>
+
+            <a href="contato.html" class="active">Contato</a>
+
+        </nav>
+
+        <span class="header-mark">
+            CONTATO / 2026
+        </span>
+
+    </header>
+
+
+    <main>
+
+        <section class="container page-hero">
+
+            <div class="meta-row">
+
+                <span>04 / 04 — CONTATO</span>
+
+                <span>VAMOS CONVERSAR</span>
+
+            </div>
+
+
+            <div>
+
+                <div class="eyebrow red">
+                    FALE COMIGO
+                </div>
+
+                <h1 class="display">
+
+                    VAMOS
+
+                    <br>
+
+                    <span class="outline">
+                        CONECTAR.
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <p class="body-copy">
+
+                Tem uma ideia, uma oportunidade
+                ou deseja conversar sobre tecnologia?
+
+                Envie uma mensagem.
+
+            </p>
+
+        </section>
+
+
+        <section class="section container">
+
+            <div class="split">
+
+                <div>
+
+                    <div class="eyebrow">
+                        ENTRE EM CONTATO
+                    </div>
+
+                    <h2 class="section-title">
+
+                        SUA IDEIA.
+
+                        <br>
+
+                        <span>NOSSA CONVERSA.</span>
+
+                    </h2>
+
+                    <br>
+
+                    <p class="body-copy">
+
+                        Estou aberta a conhecer novas ideias,
+                        compartilhar experiências e aprender
+                        com diferentes projetos.
+
+                        Utilize o formulário para entrar
+                        em contato comigo.
+
+                    </p>
+
+                    <br>
+
+                    <div class="eyebrow">
+                        GIOVANA SILVA / BRASIL
+                    </div>
+
+                </div>
+
+
+                <form id="contact-form" class="form-grid">
+
+                    <div class="field">
+
+                        <label for="nome">
+                            Nome completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Seu nome"
+                            maxlength="100"
+                            required>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="email">
+                            E-mail
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="seu@email.com"
+                            maxlength="150"
+                            required>
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="telefone">
+                            Telefone
+                        </label>
+
+                        <input
+                            type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="(00) 00000-0000"
+                            maxlength="30">
+
+                    </div>
+
+
+                    <div class="field">
+
+                        <label for="assunto">
+                            Assunto
+                        </label>
+
+                        <input
+                            type="text"
+                            id="assunto"
+                            name="assunto"
+                            placeholder="Assunto da mensagem"
+                            maxlength="120"
+                            required>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <label for="mensagem">
+                            Mensagem
+                        </label>
+
+                        <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            placeholder="Escreva sua mensagem..."
+                            maxlength="2000"
+                            required></textarea>
+
+                    </div>
+
+
+                    <div class="field full">
+
+                        <button type="submit" class="btn">
+                            ENVIAR MENSAGEM ↗
+                        </button>
+
+                        <div id="form-status"
+                            class="notice"
+                            aria-live="polite">
+
+                            Preencha os campos para enviar
+                            sua mensagem.
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <span>© 2026 GIOVANA SILVA</span>
+
+        <span>ENTRE EM CONTATO</span>
+
+        <a href="index.html">
+            VOLTAR AO INÍCIO ↗
+        </a>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="js/supabase.js"></script>
+
+    <script src="js/home.js"></script>
+
 </body>
+
 </html>
