@@ -1,192 +1,197 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Meu Portfólio</title>
+
+    <title>Login | Giovana Silva</title>
+
+    <meta name="robots" content="noindex, nofollow">
+
     <link rel="stylesheet" href="css/style.css">
 
-    <style>
-        .login-container {
-            max-width: 430px;
-            margin: 65px auto;
-            padding: 35px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 35px rgba(50, 30, 100, 0.10);
-        }
-
-        .login-container h1 {
-            color: #382477;
-            margin-bottom: 10px;
-        }
-
-        .login-container > p {
-            color: #6d687e;
-            margin-bottom: 25px;
-        }
-
-        .login-container label {
-            display: block;
-            font-weight: bold;
-            margin: 18px 0 7px;
-        }
-
-        .login-container input {
-            width: 100%;
-            padding: 13px;
-            border: 1px solid #d9d2ec;
-            border-radius: 8px;
-            font-size: 15px;
-            box-sizing: border-box;
-        }
-
-        .login-container button {
-            width: 100%;
-            padding: 14px;
-            margin-top: 25px;
-            border: none;
-            border-radius: 25px;
-            background: #6c4be8;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .login-container button:hover {
-            background: #382477;
-        }
-
-        .login-container button:disabled {
-            opacity: 0.6;
-            cursor: wait;
-        }
-
-        #mensagem-login {
-            margin-top: 15px;
-            font-size: 14px;
-        }
-
-        .voltar {
-            display: block;
-            text-align: center;
-            margin-top: 22px;
-            color: #6c4be8;
-            text-decoration: none;
-        }
-    </style>
 </head>
 
 <body>
 
-    <header>
-        <nav>
+    <header class="site-header">
+
+        <a href="index.html" class="brand">
+            G<span>.</span>S
+        </a>
+
+        <nav class="nav">
+
             <a href="index.html">Início</a>
+
             <a href="quem-sou-eu.html">Quem sou eu</a>
+
             <a href="portfolio.html">Portfólio</a>
+
             <a href="contato.html">Contato</a>
+
         </nav>
+
+        <span class="header-mark">
+            ACESSO RESTRITO
+        </span>
+
     </header>
 
-    <main>
-        <section class="login-container">
 
-            <h1>Área administrativa</h1>
-            <p>Entre com sua conta para administrar o portfólio.</p>
+    <main class="container"
+        style="min-height:80vh; display:flex; align-items:center;">
 
-            <form id="form-login">
+        <section style="width:100%; max-width:650px; margin:auto; padding:80px 0;">
 
-                <label for="email">E-mail</label>
-                <input
-                    type="email"
-                    id="email"
-                    placeholder="Digite seu e-mail"
-                    autocomplete="username"
-                    required
-                >
+            <div class="eyebrow red">
+                ÁREA ADMINISTRATIVA
+            </div>
 
-                <label for="senha">Senha</label>
-                <input
-                    type="password"
-                    id="senha"
-                    placeholder="Digite sua senha"
-                    autocomplete="current-password"
-                    required
-                >
+            <h1 class="display">
 
-                <button type="submit" id="botao-login">
-                    Entrar
-                </button>
+                ACESSO
 
-                <p id="mensagem-login" role="status"></p>
+                <br>
+
+                <span class="outline">
+                    RESTRITO.
+                </span>
+
+            </h1>
+
+            <p class="body-copy">
+
+                Entre com suas credenciais
+                administrativas para acessar
+                o painel de gerenciamento.
+
+            </p>
+
+            <br><br>
+
+
+            <form id="login-form" class="form-grid">
+
+                <div class="field full">
+
+                    <label for="email">
+                        E-mail
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        placeholder="Seu e-mail">
+
+                </div>
+
+
+                <div class="field full">
+
+                    <label for="password">
+                        Senha
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                        placeholder="Sua senha">
+
+                </div>
+
+
+                <div class="field full">
+
+                    <button type="submit" class="btn">
+                        ENTRAR NO SISTEMA ↗
+                    </button>
+
+                    <div id="login-status"
+                        class="notice"
+                        aria-live="polite">
+
+                    </div>
+
+                </div>
 
             </form>
 
-            <a class="voltar" href="index.html">
-                ← Voltar ao início
-            </a>
-
         </section>
+
     </main>
 
-    <footer>
-        <p>&copy; 2026 - Meu Portfólio Escolar</p>
+
+    <footer class="site-footer">
+
+        <span>© 2026 GIOVANA SILVA</span>
+
+        <a href="index.html">
+            VOLTAR AO SITE ↗
+        </a>
+
     </footer>
 
-    <script type="module">
 
-        import { supabase } from './js/supabase.js';
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
-        const formulario = document.getElementById('form-login');
-        const mensagem = document.getElementById('mensagem-login');
-        const botao = document.getElementById('botao-login');
+    <script src="js/supabase.js"></script>
 
-        formulario.addEventListener('submit', async function(event) {
+
+    <script>
+
+        const loginForm = document.getElementById("login-form");
+
+        loginForm.addEventListener("submit", async function(event) {
 
             event.preventDefault();
 
-            const email = document.getElementById('email').value.trim();
-            const senha = document.getElementById('senha').value;
+            const status = document.getElementById("login-status");
 
-            mensagem.textContent = 'Verificando acesso...';
-            mensagem.style.color = '#6c4be8';
+            if (!window.supabaseReady) {
 
-            botao.disabled = true;
+                status.textContent = "Configure a conexão com o Supabase.";
 
-            try {
+                status.className = "notice error";
 
-                const { data, error } = await supabase.auth.signInWithPassword({
-                    email: email,
-                    password: senha
-                });
-
-                if (error) {
-                    throw error;
-                }
-
-                mensagem.textContent = 'Login realizado com sucesso!';
-                mensagem.style.color = 'green';
-
-                window.location.href = 'dashboard.html';
-
-            } catch (error) {
-
-                mensagem.textContent = 'E-mail ou senha incorretos. Tente novamente.';
-                mensagem.style.color = 'red';
-
-                console.error('Erro no login:', error);
-
-            } finally {
-
-                botao.disabled = false;
+                return;
 
             }
+
+            const email = document.getElementById("email").value;
+
+            const password = document.getElementById("password").value;
+
+            status.textContent = "Verificando acesso...";
+
+            const { data, error } = await window.supabaseClient.auth
+                .signInWithPassword({
+                    email: email,
+                    password: password
+                });
+
+            if (error) {
+
+                status.textContent = "E-mail ou senha incorretos.";
+
+                status.className = "notice error";
+
+                return;
+
+            }
+
+            window.location.href = "dashboard.html";
 
         });
 
     </script>
 
 </body>
+
 </html>
