@@ -1,78 +1,367 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Quem Sou Eu | Seu Nome</title>
-  <meta name="description" content="Conheça a trajetória, habilidades técnicas e experiência de Seu Nome em desenvolvimento web, SEO, GEO e gestão de projetos digitais." />
-  <link rel="canonical" href="https://portfolio-pessoal-phi-nine.vercel.app/quem-sou-eu.html" />
-  <link rel="stylesheet" href="css/style.css" />
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quem sou eu | Giovana Silva</title>
+
+    <meta name="description"
+        content="Conheça Giovana Silva, sua trajetória escolar, interesses, experiências e objetivos na tecnologia.">
+
+    <meta name="author" content="Giovana Silva">
+
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
+
 <body>
-  <header>
-    <a href="index.html" class="logo-container">
-      <img src="img/logo.png" alt="Logo Oficial" onerror="this.style.display='none'" />
-      <span>Seu Nome</span>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="quem-sou-eu.html" class="active">Quem Sou Eu</a></li>
-        <li><a href="portfolio.html">Portfólio</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="login.html" class="btn-login-nav">Área Restrita</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main class="container">
-    <section class="hero" style="min-height: auto; margin-bottom: 4rem;">
-      <div class="photo-frame">
-        <img src="img/foto-perfil.jpg" alt="Foto de Seu Nome" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';" />
-        <div style="display:none; text-align:center; padding: 20px; color: #9ca3af;">
-          <p><strong>Sua Foto Aqui</strong></p>
-          <small><code>img/foto-perfil.jpg</code></small>
-        </div>
-      </div>
+    <header class="site-header">
 
-      <div class="hero-text">
-        <span class="tag">Trajetória & Visão</span>
-        <h1 style="font-size: 2.3rem;">Desenvolvimento focado em <span>resultado e performance</span>.</h1>
-        <p>
-          Sou desenvolvedor web e empreendedor digital, dedicado a construir aplicações modernas que resolvem problemas reais de negócios, instituições e empreendimentos locais.
-        </p>
-        <p>
-          Meu trabalho une código limpo, bancos de dados modernos (como Supabase) e arquitetura otimizada para <strong>SEO</strong> e <strong>GEO</strong>, garantindo que cada projeto seja encontrado tanto no Google quanto por inteligências artificiais.
-        </p>
-        <div class="btn-group">
-          <a href="portfolio.html" class="btn btn-primary">Explorar Portfólio</a>
-        </div>
-      </div>
-    </section>
+        <a href="index.html" class="brand">
+            G<span>.</span>S
+        </a>
 
-    <section>
-      <h2 class="section-title">Minhas Especialidades</h2>
-      <p class="section-subtitle">Pilares técnicos aplicados em cada entrega.</p>
+        <button class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+            ☰
+        </button>
 
-      <div class="grid-3">
-        <div class="card">
-          <h3>Desenvolvimento Web Full-Stack</h3>
-          <p>Criação de interfaces responsivas (HTML5, CSS3, JavaScript) integradas a autenticação e bases de dados modernas com Supabase.</p>
-        </div>
-        <div class="card">
-          <h3>SEO & GEO Técnico</h3>
-          <p>Estruturação semântica e dados estruturados (JSON-LD / Schema.org) para destacar marcas nas buscas tradicionais e respostas de IA.</p>
-        </div>
-        <div class="card">
-          <h3>Soluções para Negócios</h3>
-          <p>Experiência prática na criação de plataformas reais para o setor gastronômico (Sakura House), corporativo de TI (Zynk) e portais locais.</p>
-        </div>
-      </div>
-    </section>
-  </main>
+        <nav class="nav">
 
-  <footer>
-    <p>© 2026 Seu Nome — Todos os direitos reservados.</p>
-  </footer>
+            <a href="index.html">Início</a>
+
+            <a href="quem-sou-eu.html" class="active">
+                Quem sou eu
+            </a>
+
+            <a href="portfolio.html">Portfólio</a>
+
+            <a href="contato.html">Contato</a>
+
+        </nav>
+
+        <span class="header-mark">
+            SOBRE / 2026
+        </span>
+
+    </header>
+
+
+    <main>
+
+        <!-- ABERTURA -->
+
+        <section class="container page-hero">
+
+            <div class="meta-row">
+
+                <span>02 / 04 — SOBRE</span>
+
+                <span>MINHA TRAJETÓRIA</span>
+
+            </div>
+
+
+            <div>
+
+                <div class="eyebrow red">
+                    QUEM SOU EU
+                </div>
+
+                <h1 class="display">
+
+                    MINHA
+
+                    <br>
+
+                    <span class="outline">
+                        HISTÓRIA.
+                    </span>
+
+                </h1>
+
+            </div>
+
+
+            <p class="body-copy">
+
+                Uma trajetória construída com curiosidade,
+                aprendizado e vontade de transformar
+                conhecimento em experiências reais.
+
+            </p>
+
+        </section>
+
+
+        <!-- APRESENTAÇÃO -->
+
+        <section class="section container">
+
+            <div class="split">
+
+                <div class="photo-placeholder"
+                    style="position:relative; width:100%; height:430px;">
+
+                    <strong>GS</strong>
+
+                    <small>
+                        FOTOGRAFIA DE GIOVANA SILVA
+                    </small>
+
+                </div>
+
+
+                <div>
+
+                    <div class="eyebrow">
+                        01 / APRESENTAÇÃO
+                    </div>
+
+                    <h2 class="section-title">
+
+                        OLÁ, SOU
+
+                        <br>
+
+                        <span>GIOVANA.</span>
+
+                    </h2>
+
+                    <br>
+
+                    <p class="body-copy">
+
+                        Sou Giovana Silva, estudante do ensino
+                        médio e tenho interesse pela área de
+                        tecnologia, especialmente pelo
+                        desenvolvimento web e pela criação
+                        de soluções digitais.
+
+                    </p>
+
+                    <br>
+
+                    <p class="body-copy">
+
+                        Gosto de aprender na prática,
+                        explorar possibilidades e transformar
+                        ideias em projetos.
+
+                        Acredito que cada experiência é
+                        uma oportunidade de evoluir,
+                        desenvolver habilidades e descobrir
+                        novos caminhos.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TRAJETÓRIA ESCOLAR -->
+
+        <section class="section container">
+
+            <div class="eyebrow">
+                02 / FORMAÇÃO
+            </div>
+
+            <h2 class="section-title">
+
+                MINHA
+
+                <br>
+
+                <span>TRAJETÓRIA.</span>
+
+            </h2>
+
+            <br><br>
+
+            <div class="timeline">
+
+
+                <div class="timeline-item">
+
+                    <h3>Ensino médio</h3>
+
+                    <p>
+
+                        Durante minha formação escolar,
+                        venho desenvolvendo conhecimentos
+                        em diferentes áreas, participando
+                        de atividades e projetos que
+                        estimulam o pensamento crítico,
+                        a criatividade e a colaboração.
+
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>Programação e desenvolvimento web</h3>
+
+                    <p>
+
+                        Meu contato com a programação
+                        permitiu conhecer a estruturação
+                        de páginas, estilização de interfaces,
+                        interatividade e publicação de sites.
+
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>Banco de dados</h3>
+
+                    <p>
+
+                        Também desenvolvi experiências
+                        com organização, armazenamento
+                        e gerenciamento de informações,
+                        utilizando ferramentas como
+                        Supabase e MySQL.
+
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <h3>Projetos práticos</h3>
+
+                    <p>
+
+                        A criação de projetos como
+                        portais informativos, sites
+                        institucionais e sistemas
+                        relacionados à tecnologia
+                        contribuiu para transformar
+                        conhecimentos em experiências.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- INTERESSES -->
+
+        <section class="section container">
+
+            <div class="eyebrow">
+                03 / INTERESSES
+            </div>
+
+            <h2 class="section-title">
+
+                O QUE ME
+
+                <br>
+
+                <span>INSPIRA.</span>
+
+            </h2>
+
+            <br><br>
+
+            <div class="skills">
+
+                <span class="skill">TECNOLOGIA</span>
+
+                <span class="skill">PROGRAMAÇÃO</span>
+
+                <span class="skill">DESIGN DIGITAL</span>
+
+                <span class="skill">CRIATIVIDADE</span>
+
+                <span class="skill">INOVAÇÃO</span>
+
+                <span class="skill">DESENVOLVIMENTO WEB</span>
+
+                <span class="skill">APRENDIZADO</span>
+
+            </div>
+
+        </section>
+
+
+        <!-- OBJETIVOS -->
+
+        <section class="section container">
+
+            <div class="eyebrow">
+                04 / FUTURO
+            </div>
+
+            <h2 class="section-title">
+
+                APRENDER.
+
+                <br>
+
+                CRIAR.
+
+                <br>
+
+                <span>EVOLUIR.</span>
+
+            </h2>
+
+            <br>
+
+            <p class="body-copy">
+
+                Quero continuar aprimorando meus conhecimentos,
+                conhecer novas tecnologias, participar
+                de projetos desafiadores e construir
+                uma trajetória profissional na área
+                de tecnologia e inovação.
+
+                Meu objetivo é transformar aprendizado
+                em soluções cada vez mais completas,
+                funcionais e criativas.
+
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="site-footer">
+
+        <span>© 2026 GIOVANA SILVA</span>
+
+        <span>MINHA HISTÓRIA / MINHA EVOLUÇÃO</span>
+
+        <a href="portfolio.html">
+            MEUS PROJETOS ↗
+        </a>
+
+    </footer>
+
+
+    <script src="js/home.js"></script>
+
 </body>
+
 </html>
